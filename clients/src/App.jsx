@@ -8,7 +8,7 @@ import TestimonialsSection from "./pages/TestimonialsSection";
 import HowToPlays from "./pages/HowToPlay";
 import HowToDownload from "./pages/HowToDownload";
 import FantasyPointSystem from "./pages/FantasyPointSystem";
-import FantasySportsTips from "./pages/Tipstricks";
+import FantasySportsTips from "./pages/TipsTricks";
 import FantasyCricket from "./pages/FantasyCricket";
 
 function App() {
