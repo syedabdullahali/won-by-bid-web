@@ -1,194 +1,292 @@
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import Carousel from "../components/SliderCarousel";
-import MissCallSection from "./Home/MissCallSection";
-import UserRating from "./Home/UserRating";
+import React from "react";
 
-const FantasyCricket = () => {
-  const [activeSection, setActiveSection] = useState(null);
-
-  const toggleSection = (sectionKey) => {
-    if (activeSection === sectionKey) {
-      setActiveSection(null);
-    } else {
-      setActiveSection(sectionKey);
-    }
-  };
-
+const WonByBidRankingGuide = () => {
   return (
-    <div>
-      <Carousel />
-      <MissCallSection />
-      <UserRating />
-      <div className="max-w-6xl mx-auto p-6">
-        <div>
-          <h1 className="text-2xl font-bold mb-4">
-            Fantasy Cricket League & Win Real Cash
-          </h1>
+    <div className="bg-white p-6 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4 text-red-500">
+        Ranking System in WonByBid: Detailed Guide
+      </h1>
+      <p className="text-gray-700 mb-6">
+        The Ranking System in WonByBid contests determines winners based on
+        unique bids and their values, ensuring fair competition.
+      </p>
 
-          <p className="text-gray-700 mb-8 px-8">
-            Cricket is the only sport India that is played in every corner of
-            the country and unites everyone. But there are moments where you
-            feel you want to be part of the game. You can do this by getting
-            My11Circle on your phone. It is a fantasy sports app that has
-            revived the cricketing experience right at your fingertips. This
-            game of skill allows you to be part of the Fantasy Cricket League,
-            use your cricket knowledge to put a winning fantasy team together,
-            manage the team, and win cash prizes daily. You can also play
-            Fantasy Cricket League with former cricket legend, Sourav Ganguly
-            and also win an opportunity to meet him. Download the most preferred
-            Fantasy Cricket app- My11Circle and enjoy the sport thoroughly and
-            leisurely.
-          </p>
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">How Ranking Works</h2>
+        <ol className="list-decimal pl-6 text-gray-700">
+          <li>
+            <h3 className="font-bold mb-2 text-red-500">Highest Unique Bids First</h3>
+            <p>
+              The highest bid that is unique (not duplicated by others) ranks
+              first. Subsequent unique bids are ranked in descending order.
+            </p>
+          </li>
+          <li>
+            <h3 className="font-bold mb-2 text-red-500">Non-Unique Bids</h3>
+            <p>
+              Bids that are duplicated (i.e., more than one participant places
+              the same amount) are not ranked unless unique bids are
+              insufficient to fill all ranks.
+            </p>
+          </li>
+          <li>
+            <h3 className="font-bold mb-2 text-red-500">Live Ranking Updates</h3>
+            <p>
+              The system updates rankings in real time, showing the current
+              leader and how bids are positioned during the contest.
+            </p>
+          </li>
+        </ol>
+      </section>
 
-          <button className="bg-red-600 text-white px-4 py-2 rounded mb-6">
-            Today's Match Prediction
-          </button>
-          <div>
-            <img src="" alt="" />
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">Steps in the Ranking Process</h2>
+        <ol className="list-decimal pl-6 text-gray-700">
+          <li>
+            <h3 className="font-bold mb-2 text-red-500">Identify Unique Bids</h3>
+            <p>
+              The first step is to find bids that occur only once. These bids
+              are ranked from highest to lowest.
+            </p>
+          </li>
+          <li>
+            <h3 className="font-bold mb-2 text-red-500">
+              Handle Duplicated Bids (If Needed)
+            </h3>
+            <p>
+              If there are not enough unique bids to fill all the ranks,
+              duplicated bids are considered, ranked by their value.
+            </p>
+          </li>
+          <li>
+            <h3 className="font-bold mb-2 text-red-500">Tie-Breaking Rules</h3>
+            <p>
+              If two or more participants have the same unique bid amount (rare
+              but possible due to timing), the prize for the tied rank is
+              equally shared among all participants with the same bid amount.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">
+          Example with 4 Users and 6 Bids
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse border-[1px] border-blue-400">
+            <thead>
+              <tr>
+                <th className="px-4 py-2 bg-blue-200 text-left">User</th>
+                <th className="px-4 py-2 bg-blue-200 text-right">Bid Amount</th>
+                <th className="px-4 py-2 bg-blue-200 text-center">
+                  Occurrences
+                </th>
+                <th className="px-4 py-2 bg-gray-200 text-left">Feedback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-4 py-2 border-b">Ravi</td>
+                <td className="px-4 py-2 border-b text-right">₹9.99</td>
+                <td className="px-4 py-2 border-b text-center">1</td>
+                <td className="px-4 py-2 border-b">Highest and Unique</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">Priya</td>
+                <td className="px-4 py-2 border-b text-right">₹9.97</td>
+                <td className="px-4 py-2 border-b text-center">1</td>
+                <td className="px-4 py-2 border-b">Not Highest but Unique</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">Neha</td>
+                <td className="px-4 py-2 border-b text-right">₹9.96</td>
+                <td className="px-4 py-2 border-b text-center">1</td>
+                <td className="px-4 py-2 border-b">Not Highest but Unique</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">Amit</td>
+                <td className="px-4 py-2 border-b text-right">₹9.95</td>
+                <td className="px-4 py-2 border-b text-center">2</td>
+                <td className="px-4 py-2 border-b">Higher but Not Unique</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">Ravi</td>
+                <td className="px-4 py-2 border-b text-right">₹9.94</td>
+                <td className="px-4 py-2 border-b text-center">1</td>
+                <td className="px-4 py-2 border-b">Not Highest but Unique</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">Neha</td>
+                <td className="px-4 py-2 border-b text-right">₹9.95</td>
+                <td className="px-4 py-2 border-b text-center">2</td>
+                <td className="px-4 py-2 border-b">Higher but Not Unique</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">Ranking and Explanation</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse border-[1px] border-blue-400">
+            <thead>
+              <tr  className="bg-blue-200">
+                <th className="px-4 py-2 bg-blue-200 text-left">Rank</th>
+                <th className="px-4 py-2 bg-blue-200 text-left">User</th>
+                <th className="px-4 py-2 bg-blue-200 text-right">Bid Amount</th>
+                <th className="px-4 py-2 bg-blue-200 text-left">Explanation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-4 py-2 border-b">1</td>
+                <td className="px-4 py-2 border-b">Ravi</td>
+                <td className="px-4 py-2 border-b text-right">₹9.99</td>
+                <td className="px-4 py-2 border-b">Highest and Unique</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">2</td>
+                <td className="px-4 py-2 border-b">Priya</td>
+                <td className="px-4 py-2 border-b text-right">₹9.97</td>
+                <td className="px-4 py-2 border-b">
+                  Unique but lower than ₹9.99
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">3</td>
+                <td className="px-4 py-2 border-b">Neha</td>
+                <td className="px-4 py-2 border-b text-right">₹9.96</td>
+                <td className="px-4 py-2 border-b">
+                  Unique but lower than ₹9.97
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">4</td>
+                <td className="px-4 py-2 border-b">Ravi</td>
+                <td className="px-4 py-2 border-b text-right">₹9.94</td>
+                <td className="px-4 py-2 border-b">
+                  Unique but lower than ₹9.96
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="space-y-2 p-4">
+            <h2 className="text-xl font-bold text-red-500">Step 2: Handle Duplicated Bids (If Needed)</h2>
+            <ol className="list-decimal pl-6 text-gray-700">
+              <li>
+                Bids of ₹9.95 were placed by both Amit and Neha, making them not
+                unique.
+              </li>
+              <li>
+                Since there are enough unique bids to fill the ranks, duplicated
+                bids are not considered for the top ranks.
+              </li>
+            </ol>
           </div>
         </div>
-        <div className="space-y-4">
-          <div>
-            <button
-              className="w-full bg-gray-100 px-4 py-3 flex justify-between items-center"
-              onClick={() => toggleSection("what-is-fantasy-cricket")}
-            >
-              <h2 className="text-lg font-medium">
-                What is Fantasy Cricket League
-              </h2>
-              {activeSection === "what-is-fantasy-cricket" ? (
-                <ChevronUp className="w-5 h-5" />
-              ) : (
-                <ChevronDown className="w-5 h-5" />
-              )}
-            </button>
-            {activeSection === "what-is-fantasy-cricket" && (
-              <div className="px-4 py-3 border-t">
-                <p className="text-gray-700">
-                  Fantasy cricket is a game of skill where users create a
-                  virtual team of real cricket players and earn points based on
-                  the performance of those players in real-life matches. The
-                  users' teams compete against each other, and the winner is the
-                  user whose team scores the most points.
-                </p>
-              </div>
-            )}
-          </div>
+      </section>
 
-          <div>
-            <button
-              className="w-full bg-gray-100 px-4 py-3 flex justify-between items-center"
-              onClick={() => toggleSection("how-to-play")}
-            >
-              <h2 className="text-lg font-medium">
-                How to play Fantasy cricket League
-              </h2>
-              {activeSection === "how-to-play" ? (
-                <ChevronUp className="w-5 h-5" />
-              ) : (
-                <ChevronDown className="w-5 h-5" />
-              )}
-            </button>
-            {activeSection === "how-to-play" && (
-              <div className="px-4 py-3 border-t">
-                <p className="text-gray-700">
-                  To play the Fantasy Cricket League, users need to download the
-                  My11Circle app, create an account, and start building their
-                  fantasy teams. They can choose players from the available
-                  teams and earn points based on the real-life performance of
-                  those players. Users can also participate in various contests
-                  and leagues to win cash prizes.
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div>
-            <button
-              className="w-full bg-gray-100 px-4 py-3 flex justify-between items-center"
-              onClick={() => toggleSection("how-to-download")}
-            >
-              <h2 className="text-lg font-medium">
-                How to Download the Fantasy Cricket App?
-              </h2>
-              {activeSection === "how-to-download" ? (
-                <ChevronUp className="w-5 h-5" />
-              ) : (
-                <ChevronDown className="w-5 h-5" />
-              )}
-            </button>
-            {activeSection === "how-to-download" && (
-              <div className="px-4 py-3 border-t">
-                <p className="text-gray-700">
-                  To download the Fantasy Cricket app, users can visit the
-                  My11Circle website or their respective app stores (Google Play
-                  Store or Apple App Store) and search for "My11Circle". They
-                  can then install the app and create an account to start
-                  playing.
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div>
-            <button
-              className="w-full bg-gray-100 px-4 py-3 flex justify-between items-center"
-              onClick={() => toggleSection("why-play-on-my11circle")}
-            >
-              <h2 className="text-lg font-medium">
-                Why play fantasy cricket league on My11Circle
-              </h2>
-              {activeSection === "why-play-on-my11circle" ? (
-                <ChevronUp className="w-5 h-5" />
-              ) : (
-                <ChevronDown className="w-5 h-5" />
-              )}
-            </button>
-            {activeSection === "why-play-on-my11circle" && (
-              <div className="px-4 py-3 border-t">
-                <p className="text-gray-700">
-                  My11Circle is a popular fantasy sports app that has revived
-                  the cricketing experience for users. It allows users to create
-                  a virtual team of real players and earn points based on their
-                  performance. Users can also play Fantasy Cricket League with
-                  former cricket legend, Sourav Ganguly, and win cash prizes
-                  daily.
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div>
-            <button
-              className="w-full bg-gray-100 px-4 py-3 flex justify-between items-center"
-              onClick={() => toggleSection("match-schedule")}
-            >
-              <h2 className="text-lg font-medium">
-                Cricket Match Schedule and Details
-              </h2>
-              {activeSection === "match-schedule" ? (
-                <ChevronUp className="w-5 h-5" />
-              ) : (
-                <ChevronDown className="w-5 h-5" />
-              )}
-            </button>
-            {activeSection === "match-schedule" && (
-              <div className="px-4 py-3 border-t">
-                <p className="text-gray-700">
-                  The My11Circle app provides detailed information about
-                  upcoming cricket matches, including the teams involved, match
-                  timing, and other relevant details. Users can use this
-                  information to make informed decisions when building their
-                  fantasy teams.
-                </p>
-              </div>
-            )}
-          </div>
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">Final Ranking</h2>
+        <p className="text-gray-700 mb-4">
+          The ranking is determined solely by unique bids, as there are enough
+          to decide the top positions.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse border-[1px] border-blue-400">
+            <thead>
+              <tr>
+                <th className="px-4 py-2 bg-blue-200 text-left">Final Rank</th>
+                <th className="px-4 py-2 bg-blue-200 text-left">User</th>
+                <th className="px-4 py-2 bg-blue-200 text-right">Bid Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-4 py-2 border-b">1</td>
+                <td className="px-4 py-2 border-b">Ravi</td>
+                <td className="px-4 py-2 border-b text-right">₹9.99</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">2</td>
+                <td className="px-4 py-2 border-b">Priya</td>
+                <td className="px-4 py-2 border-b text-right">₹9.97</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">3</td>
+                <td className="px-4 py-2 border-b">Neha</td>
+                <td className="px-4 py-2 border-b text-right">₹9.96</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 border-b">4</td>
+                <td className="px-4 py-2 border-b">Ravi</td>
+                <td className="px-4 py-2 border-b text-right">₹9.94</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">
+          Live Updates and Dynamic Leaderboard
+        </h2>
+        <p className="text-gray-700">
+          During the contest, rankings update dynamically, showing the current
+          highest unique bid and potential winners.
+        </p>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">Important Notes</h2>
+        <ul className="list-disc pl-6 text-gray-700">
+          <li>
+            Unique Bids Are Key: Only unique bids are ranked unless there aren't
+            enough unique bids to fill all ranks.
+          </li>
+          <li>
+            Higher Value Wins: Among unique bids, higher values always rank
+            above lower ones.
+          </li>
+          <li>
+            Monitor Feedback: Use live feedback to determine if your bid is
+            unique and adjust your bids to improve your rank.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">Tips to Rank Higher</h2>
+        <ul className="list-disc pl-6 text-gray-700">
+          <li>
+            Avoid Common Numbers: Numbers like ₹10.00 or ₹5.00 are more likely
+            to be duplicated.
+          </li>
+          <li>
+            Start High and Adjust: Begin with a high bid and refine it based on
+            feedback.
+          </li>
+          <li>
+            Monitor Rankings: Keep an eye on the leaderboard and adjust your
+            strategy if you drop in rank.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-bold mb-2 text-red-500">Conclusion</h2>
+        <p className="text-gray-700">
+          The WonByBid ranking system ensures fair play by prioritizing unique
+          bids and rewarding the highest strategic players. By understanding how
+          bids are ranked and using feedback, participants can improve their
+          chances of securing top positions and winning prizes.
+        </p>
+      </section>
     </div>
   );
 };
 
-export default FantasyCricket;
+export default WonByBidRankingGuide;

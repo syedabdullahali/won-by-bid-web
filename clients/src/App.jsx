@@ -7,9 +7,17 @@ import Home from "./pages/Home/Home";
 import TestimonialsSection from "./pages/TestimonialsSection";
 import HowToPlays from "./pages/HowToPlay";
 import HowToDownload from "./pages/HowToDownload";
-import FantasyPointSystem from "./pages/FantasyPointSystem";
-import FantasySportsTips from "./pages/TipsTricks";
+import FantasyPointSystem from "./pages/Howtobid";
+import FantasySportsTips from "./pages/Tipstricks";
+
 import FantasyCricket from "./pages/FantasyCricket";
+import TieBreakingInWonByBid from './pages/TieBreaking';
+import FlexibleContestsInWonByBid from './pages/contestflexible';
+import AboutUs from "./pages/AboutUs";
+import HackingAwareness from "./pages/Hackingawarens";
+import Legality from "./pages/Legality";
+import PrivacyPolicy from "./pages/Policyprivacy";
+import TermsOfService from "./pages/TermsofService";
 
 function App() {
   return (
@@ -23,6 +31,13 @@ function App() {
         <Route path="/points-system" element={<FantasyPointSystem />} />
         <Route path="/tips-tricks" element={<FantasySportsTips />} />
         <Route path="/fantasy-cricket" element={<FantasyCricket />} />
+        <Route path="/TieBreakingInWonBy" element={<TieBreakingInWonByBid />} />
+        <Route path="/contestflexible" element={<FlexibleContestsInWonByBid />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/hack" element={<HackingAwareness />} />
+        <Route path="/legality" element={<Legality />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/termsofService" element={<TermsOfService />} />
       </Routes>
       <Footer />
     </div>

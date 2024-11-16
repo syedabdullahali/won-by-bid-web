@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image1 from '../assets/WhatsApp Image 2024-10-25 at 16.48.22_7e29096e.jpg'
+import image1 from '../assets/logo.jpg'
 const Header = ({ isLoggedIn, handleLogout }) => {
   return (
     <header className="bg-black shadow-md top-0 z-50">
@@ -11,7 +11,7 @@ const Header = ({ isLoggedIn, handleLogout }) => {
           <img 
             src={image1}
             alt="Logo" 
-            className="h-12 w-12 mr-2 rounded-full object-cover" 
+            className="h-16 w-16 mr-2 rounded-full object-cover " 
           />
           <h3 className="text-white text-xl font-bold">WONBYBID</h3>
         </Link>

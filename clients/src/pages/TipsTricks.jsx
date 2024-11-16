@@ -1,168 +1,56 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
 
-const FantasySportsTips = () => {
-  const [activeTab, setActiveTab] = useState('CRICKET');
-  const [expandedSection, setExpandedSection] = useState('');
-
-  const cricketMatches = [
-    {
-      id: 'eng-pak-2',
-      title: 'England vs Pakistan, 2nd Test: Fantasy Cricket Tips',
-      content: 'Tips and analysis for the second test match...'
-    },
-    {
-      id: 'eng-pak-1',
-      title: 'England vs Pakistan, 1st Test: Fantasy Cricket Tips',
-      content: 'Tips and analysis for the first test match...'
-    },
-    {
-      id: 'eng-ire-3',
-      title: 'England vs Ireland, 3rd ODI: Fantasy Cricket Tips',
-      content: 'Tips and analysis for the third ODI...'
-    }
-  ];
-
-  const fantasyTricks = [
-    {
-      title: "If you are playing fantasy cricket, then look out for toss",
-      content: "Make a practice of tracking the toss and make last moment changes before the match start based on who is playing first."
-    },
-    {
-      title: "Match prediction helps",
-      content: "Read the match prediction which is generally published many hours before the match to understand the upcoming match details from the experts."
-    },
-    {
-      title: "Post-match presentations",
-      content: "Always look for the previous post-match presentations to understand the strategy or any important announcements made."
-    },
-    {
-      title: "Type of contest",
-      content: "There are multiple contests around an upcoming match, and based on your expertise and knowledge, you choose the same wisely. For example, if you are a beginner, you can start with a low-fee contest and test your skills, and once you gain enough confidence in prediction and strategizing in making your team, you can go ahead for higher-fee contests as well."
-    },
-    {
-      title: "Check for our promo codes",
-      content: "There are different promotions happening at different points of time, and at times there are promo codes offered for the limited time period where the platform gives you discounts and offers which can help you play more."
-    },
-    {
-      title: "Best time to make fantasy teams",
-      content: "This is a little tricky, but at times this can help a lot when keeping a close look over players' news: you get to know last-minute injuries or players not playing, eventually helping you in making decisions before the match takes place."
-    },
-    {
-      title: "Pick the best players from each team",
-      content: "It would be wise to select the best players from each team and also the players you know are popular and likely to score more points."
-    },
-    {
-      title: "Creating multiple teams & joining multiple contests",
-      content: "The trick works better for better skilled users, because creating multiple teams or joining multiple contests is thought to increase your chances of winning but also need more expertise as you would be putting up more entry fees as well."
-    }
-  ];
-
-  const toggleSection = (id) => {
-    if (expandedSection === id) {
-      setExpandedSection('');
-    } else {
-      setExpandedSection(id);
-    }
-  };
-
+const TipsAndTricksForSuccessOnWonByBid = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      {/* Header */}
-      <h1 className="text-2xl font-bold mb-4">Tips and Tricks for Fantasy Cricket and Fantasy Football</h1>
-      
-      {/* Introduction */}
-      <p className="text-gray-700 mb-8">
-        Fantasy cricket and Fantasy football are amongst the most popular fantasy games in India today. 
-        Online gaming enthusiasts have a huge interest in playing fantasy games related to sports especially 
-        cricket and football as it brings the game at their fingertips. Here, the users create a virtual team 
-        of real players and with the right skill and strategy, win the game. Each player has a point and the 
-        scoring happens based on how the selected players perform in the LIVE matches.
-      </p>
+    <div className="bg-white rounded-lg  p-6 max-w-6xl mx-auto">
+      <h2 className="text-3xl font-semibold mb-6 text-center text-red-600">Tips and Tricks for Success on WonByBid</h2>
+      <p className="mb-6 text-gray-700 text-lg">Maximize your winnings and enhance your bidding strategy on <strong>WonByBid</strong> with these helpful tips and tricks:</p>
 
-      {/* Tab Navigation */}
-      <div className="flex border-b mb-6">
-        <button 
-          className={`px-6 py-2 font-semibold ${activeTab === 'CRICKET' ? 
-            'text-red-600 border-b-2 border-red-600' : 'text-gray-600'}`}
-          onClick={() => setActiveTab('CRICKET')}
-        >
-          CRICKET
-        </button>
-        <button 
-          className={`px-6 py-2 font-semibold ${activeTab === 'FOOTBALL' ? 
-            'text-red-600 border-b-2 border-red-600' : 'text-gray-600'}`}
-          onClick={() => setActiveTab('FOOTBALL')}
-        >
-          FOOTBALL
-        </button>
-      </div>
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">1. Study Winning Bids and Patterns</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Analyze Recent Winning Bids:</strong> Review recent winning bids and popular bid ranges displayed on the platform to gain insight into successful strategies. Identifying common patterns can help you place more competitive, unique bids.</li>
+        <li><strong>Avoid Common Ranges:</strong> Try to avoid placing bids within heavily crowded ranges. Unique bids that stand out can increase your chances of winning.</li>
+      </ul>
 
-      {/* Content Section */}
-      {activeTab === 'CRICKET' && (
-        <div>
-          <h2 className="text-xl font-bold text-red-600 mb-4">
-            QUICK FANTASY CRICKET TIPS FOR THE UPCOMING MATCHES:
-          </h2>
-          
-          <div className="space-y-2 mb-8">
-            {cricketMatches.map((match) => (
-              <div key={match.id} className="border rounded-lg bg-gray-50">
-                <button
-                  className="w-full px-4 py-3 flex justify-between items-center"
-                  onClick={() => toggleSection(match.id)}
-                >
-                  <span className="font-medium">{match.title}</span>
-                  {expandedSection === match.id ? 
-                    <ChevronUp className="w-5 h-5" /> : 
-                    <ChevronDown className="w-5 h-5" />
-                  }
-                </button>
-                {expandedSection === match.id && (
-                  <div className="px-4 py-3 border-t">
-                    {match.content}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">2. Leverage Data and Real-Time Updates</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Use Real-Time Scoring:</strong> Take advantage of WonByBid's real-time updates to stay informed on your bid status and competition. Knowing where your bid stands in real-time helps you adjust or refine your strategy for future contests.</li>
+        <li><strong>Track Contest Trends:</strong> Keep an eye on trending contests, popular entry fees, and bidding ranges to make well-informed decisions.</li>
+      </ul>
 
-          <h2 className="text-xl font-bold text-red-600 mb-4">
-            MORE FANTASY TRICKS TO PLAY BETTER:
-          </h2>
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">3. Master Your Strategy in Private Contests</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Create a Private Contest for Targeted Practice:</strong> Use private contests to refine your skills and strategies with friends. Customizing rules and limits allows you to experiment in a more controlled setting.</li>
+        <li><strong>Play with Familiar Competitors:</strong> In private contests, you can analyze your friends' strategies over time, giving you an advantage as you develop counter-strategies and improve your chances of winning.</li>
+      </ul>
 
-          <p className="text-gray-700 italic mb-4">
-            Other tricks which will help you in both fantasy cricket and football are below:
-          </p>
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">4. Utilize the Refer and Earn Program</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Earn Passive Income by Inviting Friends:</strong> Share your unique referral code and earn a 10% commission on your friends' recharges. This provides you with additional earnings, adding to your winnings without extra effort.</li>
+        <li><strong>Build a Community:</strong> Encouraging friends to join WonByBid increases the pool of familiar participants and enhances your competitive experience, especially in Private Contests.</li>
+      </ul>
 
-          <div className="space-y-4">
-            {fantasyTricks.map((trick, index) => (
-              <div key={index} className="border rounded-lg p-4">
-                <h3 className="font-bold mb-2">{trick.title}</h3>
-                <p className="text-gray-700">{trick.content}</p>
-              </div>
-            ))}
-          </div>
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">5. Bid Strategically in High-Reward Contests</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Choose Contests Wisely:</strong> Evaluate the entry fees, prize pool, and participant numbers before joining a contest. Higher entry fees often mean larger prize pools but may attract more competitive bidders.</li>
+        <li><strong>Be Selective with High-Reward Contests:</strong> High-reward contests require careful bidding. Make sure to review bid ranges and strategize thoughtfully to increase your odds in these high-stakes contests.</li>
+      </ul>
 
-          <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-            <h3 className="font-bold mb-2">Summary</h3>
-            <p className="text-gray-700">
-              You should always make sure that you have made the perfect team with the best information 
-              available on all players and expert opinions as well. Tweaking your team until the start 
-              of the match as you get more updates is also advisable and keeping track of players' form, 
-              fitness level and past records will help you make a more informed decision.
-            </p>
-          </div>
-        </div>
-      )}
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">6. Stay Updated on Special Contests and Bonus Rewards</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Look for Special Contests:</strong> Keep an eye on the platform for seasonal or limited-time contests, as these often have bonus prizes and higher earnings potential.</li>
+        <li><strong>Participate Regularly:</strong> Engaging consistently on WonByBid allows you to spot trends, adjust your strategies over time, and increase your earnings through repeat participation.</li>
+      </ul>
 
-      {activeTab === 'FOOTBALL' && (
-        <div className="text-center py-8 text-gray-600">
-          Football tips content coming soon...
-        </div>
-      )}
+      <h3 className="text-2xl font-semibold mb-4 text-red-600">7. Start Small and Gradually Increase Your Stakes</h3>
+      <ul className="list-disc pl-6 mb-4 text-gray-700">
+        <li><strong>Begin with Smaller Contests:</strong> If you're new, start by joining smaller contests to understand bidding dynamics and refine your skills without risking much.</li>
+        <li><strong>Gradually Increase Bid Amounts:</strong> As you gain experience and confidence, gradually increase your bids and participate in higher-stakes contests to maximize your rewards.</li>
+      </ul>
+
+      <p className="text-gray-700 text-lg">With these tips and tricks, you can sharpen your strategy, enhance your bidding skills, and make the most out of your experience on <strong>WonByBid</strong>. Start playing smarter today and watch your winnings grow!</p>
     </div>
   );
 };
 
-export default FantasySportsTips;
+export default TipsAndTricksForSuccessOnWonByBid;

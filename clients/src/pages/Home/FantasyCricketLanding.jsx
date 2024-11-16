@@ -8,42 +8,41 @@ const FantasyCricketLanding = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
           {/* Left Column - Content */}
           <div className="space-y-4 sm:space-y-5 lg:space-y-6">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-700 leading-tight">
-              Play Contests on Won by Bid App
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-red-700 leading-tight">
+              Play Contests on WonByBid
             </h1>
 
             <div className="space-y-4 lg:text-xl text-justify sm:text-base">
               <p className="text-gray-700 leading-relaxed">
-                Craving the excitement of fantasy sports but struggling to find
-                the time? Look no further than Won by Bid! Our app brings your
-                favorite fantasy sports to life, offering fantasy cricket,
-                football, and kabaddi right at your fingertips. Choose your dream
-                teams, play the games, and win big!
+                "Looking for quick results and real winnings?{" "}
+                <span className=" font-bold"> WonByBid</span> is here to
+                redefine the thrill of competition! Our unique, skill-based
+                bidding platform offers an exciting way to win big with instant
+                results. With <span className=" font-bold">WonByBid.com</span>,
+                there’s no waiting – just place your unique bid and see if
+                you've secured the prize.
               </p>
 
               <p className="text-gray-700 leading-relaxed">
-                <span className="text-red-400">WonByBid.com</span>, Part of Games24x7, Won by Bid delivers the best
-                fantasy gaming experience. Our platform ensures the same top-notch
-                gameplay and reliability that has made RummyCircle India's leading
-                rummy destination with over 10 million players. Sign up, select
-                your game, and start winning real cash daily. Don't wait—join now
-                and immerse yourself in the thrill of fantasy sports!
+                Our platform combines fast-paced contests, secure gameplay, and
+                real cash rewards. Whether you’re a sports enthusiast or simply
+                love strategic bidding,{" "}
+                <span className=" font-bold"> WonByBid</span> lets you jump in,
+                play, and win on your terms – anytime, anywhere.
               </p>
 
               <p className="text-gray-700 leading-relaxed">
-                Playing fantasy cricket, football, or any other fantasy game on
-                Won by Bid not only enhances your skills but also lets you earn
-                real cash rewards. Our secure and user-friendly platform allows
-                you to enjoy fantasy sports anytime, anywhere. Get started and
-                experience the action on India's fastest-growing online fantasy
-                cricket app today.
+                Join <span className=" font-bold"> WonByBid</span> today, where
+                quick results, instant rewards, and the excitement of strategic
+                bidding come together. Don’t miss out – start bidding and
+                winning now!"
               </p>
             </div>
 
             <div className="pt-2 sm:pt-4">
-              <button className="w-full sm:w-auto bg-white text-red-600 px-6 py-3 rounded-lg border-2 border-red-600 hover:bg-red-50 transition-colors duration-200 font-medium text-sm sm:text-base">
+              {/* <button className="w-full sm:w-auto bg-white text-red-600 px-6 py-3 rounded-lg border-2 border-red-600 hover:bg-red-50 transition-colors duration-200 font-medium text-sm sm:text-base">
                 Today's Match Preview
-              </button>
+              </button> */}
             </div>
           </div>
 
