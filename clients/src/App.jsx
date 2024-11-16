@@ -9,6 +9,7 @@ import HowToPlays from "./pages/HowToPlay";
 import HowToDownload from "./pages/HowToDownload";
 import FantasyPointSystem from "./pages/Howtobid";
 import FantasySportsTips from "./pages/Tipstricks";
+
 import FantasyCricket from "./pages/FantasyCricket";
 import TieBreakingInWonByBid from './pages/TieBreaking';
 import FlexibleContestsInWonByBid from './pages/contestflexible';
