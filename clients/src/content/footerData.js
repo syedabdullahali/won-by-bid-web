@@ -6,11 +6,7 @@ import {
     FaTelegram,
     FaWhatsapp,
   } from "react-icons/fa";
-  import { 
-    SiPaytm, 
-    SiRazorpay, 
-    SiCashapp,
-  } from "react-icons/si";
+
   import { BiMoney } from "react-icons/bi";
   import { BsCreditCard2Front } from "react-icons/bs";
   
