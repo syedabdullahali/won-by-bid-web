@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown,  } from 'lucide-react';
-// import { simpleContestFaqs, privateContestFaqs,referAndEarnFaqs } from '../../content/faqData';
-const SportsContent = () => {
-  // faqData.js
- const simpleContestFaqs = [
+// faqData.js
+export const simpleContestFaqs = [
   {
     id: "What is Simple Contest on WonByBid?",
     title: "What is a Simple Contest on WonbyBid?",
@@ -90,7 +86,7 @@ const SportsContent = () => {
   },
 ];
 
- const privateContestFaqs = [
+export const privateContestFaqs = [
   {
     id: "what-is-private-contest",
     title: "What is a Private Contest on WonByBid?",
@@ -285,7 +281,7 @@ const SportsContent = () => {
   },
 ];
 
- const referAndEarnFaqs = [
+export const referAndEarnFaqs = [
   {
     id: "refer-and-earn-1",
     title: "How does the Refer and Earn program work?",
@@ -340,96 +336,3 @@ const SportsContent = () => {
     },
   },
 ];
-const [activeTab, setActiveTab] = useState('simple');
-const [expandedSection, setExpandedSection] = useState('');
-
-const toggleSection = (sectionId) => {
-  setExpandedSection(expandedSection === sectionId ? '' : sectionId);
-};
-
-const FaqItem = ({ faq }) => (
-  <div className="rounded-lg overflow-hidden bg-white border border-gray-200 hover:shadow-lg transition-all duration-300">
-    <button 
-      className="w-full px-6 py-4 flex justify-between items-center cursor-pointer group"
-      onClick={() => toggleSection(faq.id)}
-      aria-expanded={expandedSection === faq.id}
-    >
-      <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 text-left pr-4">
-        {faq.title}
-      </h2>
-      <div className={`transform transition-transform duration-200 ${
-        expandedSection === faq.id ? 'rotate-180' : ''
-      }`}>
-        <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-red-500" />
-      </div>
-    </button>
-    
-    {expandedSection === faq.id && (
-      <div className="px-6 py-4 space-y-4 bg-gray-50 border-t border-gray-200">
-        <div className="space-y-2">
-          <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900">
-            {faq.content.heading}
-          </h3>
-          {faq.content.subheading && (
-            <h4 className="text-sm sm:text-base font-medium text-gray-700">
-              {faq.content.subheading}
-            </h4>
-          )}
-        </div>
-        <div className="prose prose-sm sm:prose lg:prose-lg max-w-none text-gray-600">
-          {faq.content.paragraphs}
-        </div>
-      </div>
-    )}
-  </div>
-);
-
-// Define the tabs configuration
-const tabs = [
-  {
-    id: 'simple',
-    label: 'Simple Contest',
-    data: simpleContestFaqs
-  },
-  {
-    id: 'private',
-    label: 'Private Contest',
-    data: privateContestFaqs
-  },
-  {
-    id: 'refer-and-earn',
-    label: 'Refer and Earn',
-    data: referAndEarnFaqs
-  }
-];
-
-return (
-  <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
-    <div className="mb-8 border-b border-gray-200">
-      <div className="flex space-x-8">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`relative py-3 px-1 text-sm sm:text-base lg:text-lg font-medium transition-colors duration-200 ${
-              activeTab === tab.id
-                ? 'text-red-600 border-b-2 border-red-600'
-                : 'text-gray-500 hover:text-gray-700'
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-    </div>
-
-    <div className="space-y-4">
-      {tabs.find(tab => tab.id === activeTab)?.data.map(faq => (
-        <FaqItem key={faq.id} faq={faq} />
-      ))}
-    </div>
-  </div>
-);
-};
-
-export default SportsContent;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import image1 from '../../assets/WhatsApp Image 2024-11-11 at 15.09.43_2fc3a4c6.jpg'
-// import video1 from '../../assets/Recording 2024-08-29 114848.mp4'
+import { Play, Monitor, Users, Trophy } from 'lucide-react';
+import image1 from '../../assets/WhatsApp Image 2024-11-11 at 15.09.43_2fc3a4c6.jpg';
+
 const StepsLayout = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -12,94 +13,97 @@ const StepsLayout = () => {
     }
   };
 
+  const steps = [
+    {
+      title: "Select a Contest  ",
+      description: "Choose from our range of live and upcoming contests.",
+      icon: <Monitor className="w-6 h-6 sm:w-7 sm:h-7" />
+    },
+    {
+      title: "Place Your Unique Bid  ",
+      description: "Strategically place a unique bid to increase your chances of winning big.",
+      icon: <Users className="w-6 h-6 sm:w-7 sm:h-7" />
+    },
+    {
+      title: "Create Private Contests",
+      description: "   Add excitement and boost your earnings potential by hosting private contests. Invite friends to compete and enjoy the thrill of exclusive, high-stakes bidding!",
+      icon: <Trophy className="w-6 h-6 sm:w-7 sm:h-7" />
+    }
+  ];
+
   return (
-    <div className="bg-red-700 p-4 sm:p-6 lg:p-8">
-      <div className=" mx-auto">
-        {/* Changed to stack on mobile, side-by-side on larger screens */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-          {/* Left side - Video Section */}
-          <div className="relative w-auto aspect-video max-w-[600px] mx-auto bg-black rounded-lg overflow-hidden">
-            <video
-              id="mainVideo"
-              className="w-[500px] h-full object-cover"
-              controls={isPlaying}
-              poster={image1}
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-            >
-              <source src="https://youtu.be/kkB9O-hbnKM" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Play Button Overlay */}
-            {!isPlaying && (
-              <div 
-                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors cursor-pointer"
-                tabIndex={0}
-                onClick={handlePlayClick}
+    <div className="bg-gradient-to-br from-red-700 to-red-800 px-4 py-8 sm:p-8 lg:p-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Video Section */}
+          <div className="relative w-full aspect-video max-w-[600px] mx-auto">
+            <div className="absolute inset-0 bg-black/5 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+              <video
+                id="mainVideo"
+                className="w-full h-full object-cover"
+                controls={isPlaying}
+                poster={image1}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
               >
-                <div className="w-24 sm:w-32 h-12 sm:h-16 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center hover:bg-red-700 transition-colors">
-                  <svg 
-                    className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1 sm:ml-2" 
-                    viewBox="0 0 24 24" 
-                    fill="currentColor"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-            )}
+                <source src="https://youtu.be/kkB9O-hbnKM" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
 
-            {/* Video Title Overlay */}
-            {!isPlaying && (
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 sm:p-4">
-                <h3 className="text-white text-base sm:text-lg lg:text-xl font-semibold">How to play on #WON BY BID</h3>
-              </div>
-            )}
+              {/* Play Button Overlay */}
+              {!isPlaying && (
+                <div 
+                  className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm hover:bg-black/50 transition-all duration-300 cursor-pointer group"
+                  onClick={handlePlayClick}
+                >
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-all duration-300 transform group-hover:scale-110">
+                    <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" fill="currentColor" />
+                  </div>
+                </div>
+              )}
+
+              {/* Video Title Overlay */}
+              {!isPlaying && (
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 sm:p-6">
+                  <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-bold">
+                    How to play on #WON BY BID
+                  </h3>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Right side - 3 Easy Steps */}
-          <div className="text-white mt-6 lg:mt-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-center">3 Easy Steps</h2>
+          {/* Steps Section */}
+          <div className=" grid grid-row-3 text-white mt-8 lg:mt-0">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-center lg:text-left">
+              <span className="block text-white/80 text-xl sm:text-2xl mb-2">Getting Started</span>
+              3 Easy Steps
+            </h2>
             
-            {/* Changed to vertical stack on mobile/tablet, horizontal on large screens */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 lg:gap-6">
-              {/* Step 1 */}
-              <div className="flex flex-col items-center text-center p-4">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 bg-white/10 rounded-full flex items-center justify-center">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <path d="M8 12h8" strokeWidth="2"/>
-                  </svg>
+            <div className="space-y-6 sm:space-y-8">
+              {steps.map((step, index) => (
+                <div 
+                  key={index}
+                  className="flex items-start space-x-4 p-4 sm:p-6 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/15 transition-all duration-300 transform hover:scale-[1.02]"
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-lg flex items-center justify-center">
+                      {step.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                  <div className="hidden sm:flex items-center justify-center w-8 h-8 bg-white/20 rounded-full text-sm font-bold">
+                    {index + 1}
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">Select a Match</h3>
-                <p className="text-sm sm:text-base text-gray-200">Select an upcoming match of your choice</p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex flex-col items-center text-center p-4">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 bg-white/10 rounded-full flex items-center justify-center">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeWidth="2"/>
-                    <circle cx="9" cy="7" r="4" strokeWidth="2"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" strokeWidth="2"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">Create Your own Private Contests</h3>
-                <p className="text-sm sm:text-base text-gray-200">Use your sports knowledge to create a team using 100 credits</p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col items-center text-center p-4">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 bg-white/10 rounded-full flex items-center justify-center">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M12 2v6m0 12v2M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m12 0h2M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">Join Contests</h3>
-                <p className="text-sm sm:text-base text-gray-200">Participate in Cash or Practice Contests</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

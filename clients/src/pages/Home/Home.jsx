@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Carousel from "../../components/SliderCarousel";
 import MissCallSection from './MissCallSection';
 import UserRating from './UserRating';
@@ -9,19 +9,23 @@ import FAQAccordion from './FAQAccordion';
 import TestimonialSlider from './TestimonialSlider';
 
 const Home = () => {
+  const handleDownloadAppClick = () => {
+    window.open("https://www.transferx.in/trnsfr.YSloVo", "_blank");
+  };
   return (
     <div>
       <Carousel />
-      <MissCallSection/>
-      <UserRating/>
-      <StepsLayout/>
-      <FantasyCricketLanding/>
-      <SportsContent/>
-      <FAQAccordion/>
-      <TestimonialSlider/>
-      
+      <MissCallSection />
+      <StepsLayout />
+      <FantasyCricketLanding />
+      <SportsContent />
+      <FAQAccordion />
+      <TestimonialSlider />
+      <div className="fixed bottom-0 right-0 p-4 bg-red-500 shadow-md rounded-t-xl ">
+        <button onClick={handleDownloadAppClick} className="text-sm font-medium">Download WonByBid app</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
