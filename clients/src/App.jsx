@@ -8,7 +8,8 @@ import TestimonialsSection from "./pages/TestimonialsSection";
 import HowToPlays from "./pages/HowToPlay";
 import HowToDownload from "./pages/HowToDownload";
 import FantasyPointSystem from "./pages/Howtobid";
-import FantasySportsTips from "./pages/Tipstricks";
+import TipsAndTricksForSuccessOnWonByBid from "./pages/TipsTricks";
+
 import FantasyCricket from "./pages/FantasyCricket";
 import TieBreakingInWonByBid from './pages/TieBreaking';
 import FlexibleContestsInWonByBid from './pages/contestflexible';
@@ -28,7 +29,7 @@ function App() {
         <Route path="/how-to-play" element={<HowToPlays />} />
         <Route path="/how-to-download" element={<HowToDownload />} />
         <Route path="/points-system" element={<FantasyPointSystem />} />
-        <Route path="/tips-tricks" element={<FantasySportsTips />} />
+        <Route path="/tips-tricks" element={<TipsAndTricksForSuccessOnWonByBid />} />
         <Route path="/fantasy-cricket" element={<FantasyCricket />} />
         <Route path="/TieBreakingInWonBy" element={<TieBreakingInWonByBid />} />
         <Route path="/contestflexible" element={<FlexibleContestsInWonByBid />} />
