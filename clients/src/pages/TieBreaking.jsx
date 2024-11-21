@@ -58,7 +58,7 @@ const TieBreakingInWonByBid = () => {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full  border-collapse border-[1px] border-blue-400 rounded-lg shadow-md">
+        <table className="w-full text-center  border-collapse border-[1px] border-blue-400 rounded-lg shadow-md">
           <thead>
             <tr className="bg-blue-200">
               <th className="px-4 py-2 border-b border-blue-400">User</th>
@@ -113,7 +113,7 @@ const TieBreakingInWonByBid = () => {
 
       <h3 className="text-xl font-bold mb-4 text-red-500">Final Results</h3>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border-[1px] border-blue-400 rounded-lg shadow-md">
+        <table className="w-full border-collapse border-[1px] text-center border-blue-400 rounded-lg shadow-md">
           <thead>
             <tr className="bg-blue-200">
               <th className="px-4 py-2 border-b border-blue-400">Rank</th>

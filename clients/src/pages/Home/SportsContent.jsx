@@ -576,7 +576,7 @@ const SportsContent = () => {
               friends 1,000 INR
             </p>
 
-            <h2 className="text-red-500">How Refer and Earn Works</h2>
+            <h2 className="font-bold">How Refer and Earn Works</h2>
             <ol className="list-decimal font-semibold space-y-4 p-4">
               <li>
                 <span className="font-bold">

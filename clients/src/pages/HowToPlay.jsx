@@ -4,7 +4,7 @@ import { Book, Target, Play, HelpCircle, FileText, ChevronDown } from 'lucide-re
 const Section = ({ title, content, icon }) => (
   <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 mb-8 border border-gray-100">
     <div className="flex items-center gap-4 mb-4">
-      <div className="bg-purple-100 p-3 rounded-lg">
+      <div className="bg-red-100 p-3 rounded-lg">
         {icon}
       </div>
       <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
@@ -41,8 +41,8 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const GlossaryItem = ({ term, definition }) => (
-  <div className="mb-4 p-4 bg-white rounded-lg border border-gray-100 hover:border-purple-200 transition-colors">
-    <h4 className="font-semibold text-purple-700 mb-1">{term}</h4>
+  <div className="mb-4 p-4 bg-white rounded-lg border border-gray-100 hover:border-red-200 transition-colors">
+    <h4 className="font-semibold text-red-700 mb-1">{term}</h4>
     <p className="text-gray-600">{definition}</p>
   </div>
 );
@@ -73,29 +73,29 @@ const HowToPlay = () => {
         {/* Main Sections */}
         <Section
           title="Introduction"
-          icon={<Book className="w-6 h-6 text-purple-600" />}
+          icon={<Book className="w-6 h-6 text-red-600" />}
           content="Fantasy sports on Won By Bid allows you to create a virtual team of real players from upcoming matches. Your team earns points based on the players' real-life performances. Compete against others to win cash prizes and rewards."
         />
 
         <Section
           title="Objective"
-          icon={<Target className="w-6 h-6 text-purple-600" />}
+          icon={<Target className="w-6 h-6 text-red-600" />}
           content="The goal is to create a high-scoring team by selecting players based on their form and skill, outscoring opponents to win cash prizes. You can also bid for players in some contests to add a strategic layer to team selection."
         />
 
         {/* How to Play Steps */}
         <div className="bg-white rounded-xl p-8 shadow-sm mb-8 border border-gray-100">
           <div className="flex items-center gap-4 mb-6">
-            <div className="bg-purple-100 p-3 rounded-lg">
-              <Play className="w-6 h-6 text-purple-600" />
+            <div className="bg-red-100 p-3 rounded-lg">
+              <Play className="w-6 h-6 text-red-600" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800">How to Play</h2>
           </div>
           <div className="space-y-4">
             {steps.map((step, index) => (
               <div key={index} className="flex items-center gap-4">
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="font-medium text-purple-600">{index + 1}</span>
+                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="font-medium text-red-600">{index + 1}</span>
                 </div>
                 <p className="text-gray-700">{step}</p>
               </div>
@@ -106,8 +106,8 @@ const HowToPlay = () => {
         {/* FAQ Section */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
-            <div className="bg-purple-100 p-3 rounded-lg">
-              <HelpCircle className="w-6 h-6 text-purple-600" />
+            <div className="bg-red-100 p-3 rounded-lg">
+              <HelpCircle className="w-6 h-6 text-red-600" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800">Frequently Asked Questions</h2>
           </div>
@@ -130,8 +130,8 @@ const HowToPlay = () => {
         {/* Glossary Section */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
-            <div className="bg-purple-100 p-3 rounded-lg">
-              <FileText className="w-6 h-6 text-purple-600" />
+            <div className="bg-red-100 p-3 rounded-lg">
+              <FileText className="w-6 h-6 text-red-600" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800">Glossary</h2>
           </div>

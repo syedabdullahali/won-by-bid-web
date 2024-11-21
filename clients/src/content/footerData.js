@@ -120,15 +120,15 @@ import {
         src: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/18plus-icon-v1.png",
         alt: "responsive"
       },
-      {
-        src: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/my11-egf-e-gaming-federation.png",
-        alt: "responsive"
-      }
+      // {
+      //   src: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/my11-egf-e-gaming-federation.png",
+      //   alt: "responsive"
+      // }
     ],
   
     companyInfo: {
       name: "WonByBid",
-      copyright: "© 2024 Play Games24x7 Pvt. Ltd. All Rights Reserved.",
-      disclaimer: "*You must be 18 years to play real money skill games"
+      copyright: "© 2024 SDHR InnoWorks Pvt. Ltd. All Rights Reserved.",
+      disclaimer: "You must be 18 years to play real money skill games"
     }
   };

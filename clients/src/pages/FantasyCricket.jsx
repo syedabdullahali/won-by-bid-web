@@ -74,51 +74,51 @@ const WonByBidRankingGuide = () => {
           Example with 4 Users and 6 Bids
         </h2>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse border-[1px] border-blue-400">
+          <table className="w-full text-center border-collapse border-[1px] border-blue-400">
             <thead>
               <tr>
                 <th className="px-4 py-2 bg-blue-200 text-left">User</th>
-                <th className="px-4 py-2 bg-blue-200 text-right">Bid Amount</th>
+                <th className="px-4 py-2 bg-blue-200  text-center">Bid Amount</th>
                 <th className="px-4 py-2 bg-blue-200 text-center">
                   Occurrences
                 </th>
-                <th className="px-4 py-2 bg-gray-200 text-left">Feedback</th>
+                <th className="px-4 py-2 bg-blue-200 text-left">Feedback</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="px-4 py-2 border-b">Ravi</td>
-                <td className="px-4 py-2 border-b text-right">₹9.99</td>
+                <td className="px-4 py-2 border-b text-center">₹9.99</td>
                 <td className="px-4 py-2 border-b text-center">1</td>
                 <td className="px-4 py-2 border-b">Highest and Unique</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">Priya</td>
-                <td className="px-4 py-2 border-b text-right">₹9.97</td>
+                <td className="px-4 py-2 border-b text-center">₹9.97</td>
                 <td className="px-4 py-2 border-b text-center">1</td>
                 <td className="px-4 py-2 border-b">Not Highest but Unique</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">Neha</td>
-                <td className="px-4 py-2 border-b text-right">₹9.96</td>
+                <td className="px-4 py-2 border-b text-center">₹9.96</td>
                 <td className="px-4 py-2 border-b text-center">1</td>
                 <td className="px-4 py-2 border-b">Not Highest but Unique</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">Amit</td>
-                <td className="px-4 py-2 border-b text-right">₹9.95</td>
+                <td className="px-4 py-2 border-b text-center">₹9.95</td>
                 <td className="px-4 py-2 border-b text-center">2</td>
                 <td className="px-4 py-2 border-b">Higher but Not Unique</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">Ravi</td>
-                <td className="px-4 py-2 border-b text-right">₹9.94</td>
+                <td className="px-4 py-2 border-b text-center">₹9.94</td>
                 <td className="px-4 py-2 border-b text-center">1</td>
                 <td className="px-4 py-2 border-b">Not Highest but Unique</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">Neha</td>
-                <td className="px-4 py-2 border-b text-right">₹9.95</td>
+                <td className="px-4 py-2 border-b text-center">₹9.95</td>
                 <td className="px-4 py-2 border-b text-center">2</td>
                 <td className="px-4 py-2 border-b">Higher but Not Unique</td>
               </tr>
@@ -130,26 +130,26 @@ const WonByBidRankingGuide = () => {
       <section className="mb-6">
         <h2 className="text-xl font-bold mb-2 text-red-500">Ranking and Explanation</h2>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse border-[1px] border-blue-400">
+          <table className="w-full text-center border-collapse border-[1px] border-blue-400">
             <thead>
               <tr  className="bg-blue-200">
                 <th className="px-4 py-2 bg-blue-200 text-left">Rank</th>
                 <th className="px-4 py-2 bg-blue-200 text-left">User</th>
-                <th className="px-4 py-2 bg-blue-200 text-right">Bid Amount</th>
-                <th className="px-4 py-2 bg-blue-200 text-left">Explanation</th>
+                <th className="px-4 py-2 bg-blue-200 text-center">Bid Amount</th>
+                <th className="px-4 py-2 bg-blue-200 text-center">Explanation</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="px-4 py-2 border-b">1</td>
                 <td className="px-4 py-2 border-b">Ravi</td>
-                <td className="px-4 py-2 border-b text-right">₹9.99</td>
+                <td className="px-4 py-2 border-b text-center">₹9.99</td>
                 <td className="px-4 py-2 border-b">Highest and Unique</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">2</td>
                 <td className="px-4 py-2 border-b">Priya</td>
-                <td className="px-4 py-2 border-b text-right">₹9.97</td>
+                <td className="px-4 py-2 border-b text-center">₹9.97</td>
                 <td className="px-4 py-2 border-b">
                   Unique but lower than ₹9.99
                 </td>
@@ -157,7 +157,7 @@ const WonByBidRankingGuide = () => {
               <tr>
                 <td className="px-4 py-2 border-b">3</td>
                 <td className="px-4 py-2 border-b">Neha</td>
-                <td className="px-4 py-2 border-b text-right">₹9.96</td>
+                <td className="px-4 py-2 border-b text-center">₹9.96</td>
                 <td className="px-4 py-2 border-b">
                   Unique but lower than ₹9.97
                 </td>
@@ -165,7 +165,7 @@ const WonByBidRankingGuide = () => {
               <tr>
                 <td className="px-4 py-2 border-b">4</td>
                 <td className="px-4 py-2 border-b">Ravi</td>
-                <td className="px-4 py-2 border-b text-right">₹9.94</td>
+                <td className="px-4 py-2 border-b text-center">₹9.94</td>
                 <td className="px-4 py-2 border-b">
                   Unique but lower than ₹9.96
                 </td>
@@ -196,34 +196,34 @@ const WonByBidRankingGuide = () => {
           to decide the top positions.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse border-[1px] border-blue-400">
+          <table className="w-full  border-collapse border-[1px] border-blue-400">
             <thead>
               <tr>
                 <th className="px-4 py-2 bg-blue-200 text-left">Final Rank</th>
                 <th className="px-4 py-2 bg-blue-200 text-left">User</th>
-                <th className="px-4 py-2 bg-blue-200 text-right">Bid Amount</th>
+                <th className="px-4 py-2 bg-blue-200 text-center">Bid Amount</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="">
               <tr>
                 <td className="px-4 py-2 border-b">1</td>
                 <td className="px-4 py-2 border-b">Ravi</td>
-                <td className="px-4 py-2 border-b text-right">₹9.99</td>
+                <td className="px-4 py-2 border-b text-center">₹9.99</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">2</td>
                 <td className="px-4 py-2 border-b">Priya</td>
-                <td className="px-4 py-2 border-b text-right">₹9.97</td>
+                <td className="px-4 py-2 border-b text-center">₹9.97</td>
               </tr>
               <tr>
                 <td className="px-4 py-2 border-b">3</td>
                 <td className="px-4 py-2 border-b">Neha</td>
-                <td className="px-4 py-2 border-b text-right">₹9.96</td>
+                <td className="px-4 py-2 border-b text-center">₹9.96</td>
               </tr>
-              <tr>
+              <tr >
                 <td className="px-4 py-2 border-b">4</td>
                 <td className="px-4 py-2 border-b">Ravi</td>
-                <td className="px-4 py-2 border-b text-right">₹9.94</td>
+                <td className="px-4 py-2 border-b text-center">₹9.94</td>
               </tr>
             </tbody>
           </table>

@@ -82,7 +82,7 @@ const FlexibleContestsInWonByBid = () => {
 
       <h3 className="text-xl font-bold mb-4 text-red-500">Example of a Flexible Contest</h3>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border-[1px] border-blue-400">
+        <table className="w-full text-center border-collapse border-[1px] border-blue-400">
           <thead>
             <tr className='bg-blue-200'>
               <th className="px-4 py-2 border-b border-blue-400">Contest Details</th>
@@ -117,7 +117,7 @@ const FlexibleContestsInWonByBid = () => {
       <h3 className="text-xl font-bold mb-4 text-red-500">Scenarios</h3>
       <h4 className="text-lg font-bold mb-2 text-red-500">Scenario 1: Full Participation (100 Players)</h4>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border-[1px] border-blue-400">
+        <table className="w-full text-center border-collapse border-[1px] border-blue-400">
           <thead>
             <tr className='bg-blue-200'>
               <th className="px-4 py-2 border-b border-blue-400">Rank</th>
@@ -158,7 +158,7 @@ const FlexibleContestsInWonByBid = () => {
 
       <h4 className="text-lg font-bold mb-2 text-red-500">Scenario 2: Partial Participation (50 Players)</h4>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border-[1px] border-blue-400">
+        <table className="w-full text-center border-collapse border-[1px] border-blue-400">
           <thead>
             <tr className='bg-blue-200'>
               <th className="px-4 py-2 border-b border-blue-400">Rank</th>
