@@ -1,6 +1,6 @@
 import React from "react";
 import { FOOTER_CONFIG } from "../../content/footerData";
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const { 
     quickLinks, 
@@ -45,12 +45,12 @@ const Footer = () => {
                 <ul className="space-y-2">
                   {quickLinks.map((link, index) => (
                     <li key={index}>
-                      <a 
-                        href={link.link}
+                      <Link 
+                        to={link.link}
                         className="text-sm hover:text-red-200 transition-colors duration-200 block truncate"
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -62,12 +62,12 @@ const Footer = () => {
                 <ul className="space-y-2">
                   {secondColumnLinks.map((link, index) => (
                     <li key={index} className="underline ">
-                      <a 
-                        href={link.link}
+                      <Link 
+                        to={link.link}
                         className="text-sm hover:text-red-200 transition-colors duration-200 block truncate"
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
