@@ -8,45 +8,45 @@ const TestimonialSlider = () => {
 
   const testimonials = [
     {
-      name: "Ramesh Singh",
-      location: "Ghaziabad, Uttar Pradesh",
-      winnings: "₹1 Crore",
-      testimonial: "I won 1 crore on Won by Bid & I am very happy. My experience with playing Won by Bid for the last 2 years has been amazing. I recommend it very highly to every sports fantasy player.",
-      image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/ramesh-singh.jpg"
-    },
-    {
-      name: "Pradip Apte",
-      location: "Latur, Maharashtra",
-      winnings: "₹1 Crore",
-      testimonial: "I've been an avid cricket follower since my childhood. I got to know about Won by Bid from a YouTube ad. Recently won 1 Crore on Won by Bid! The favorite part about the Won by Bid app is that it's easy, secure, and smooth!",
+      name: "Rajesh Kumar",
+      location: "Mumbai, Maharashtra",
+      winnings: "₹5 Lakh",
+      testimonial: "WonByBid changed my cricket experience completely! Started with small leagues and won ₹5 Lakh in the IPL mega contest. The platform's analytics tools really helped me make informed decisions.",
       image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/pradip-apte.jpg"
     },
     {
-      name: "Ramesh Singh",
-      location: "Ghaziabad, Uttar Pradesh",
-      winnings: "₹1 Crore",
-      testimonial: "I won 1 crore on Won by Bid & I am very happy. My experience with playing Won by Bid for the last 2 years has been amazing. I recommend it very highly to every sports fantasy player.",
+      name: "Priya Sharma",
+      location: "Bangalore, Karnataka",
+      winnings: "₹3.2 Lakh",
+      testimonial: "As a cricket analyst, I love how WonByBid combines statistics with gameplay. Won ₹3.2 Lakh in my first month! The player performance predictions and real-time updates are incredibly useful.",
       image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/ramesh-singh.jpg"
     },
     {
-      name: "Pradip Apte",
-      location: "Latur, Maharashtra",
-      winnings: "₹1 Crore",
-      testimonial: "I've been an avid cricket follower since my childhood. I got to know about WonbyBid from a YouTube ad. Recently won 1 Crore on WonbyBid! The favorite part about the Won by Bid app is that it's easy, secure, and smooth!",
+      name: "Mohammed Siddiqui",
+      location: "Hyderabad, Telangana",
+      winnings: "₹7.5 Lakh",
+      testimonial: "WonByBid's instant withdrawals and secure transactions gave me confidence. Started playing daily leagues, and within 6 months, secured a massive ₹7.5 Lakh win during the T20 World Cup!",
       image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/pradip-apte.jpg"
     },
     {
-      name: "Ramesh Singh",
-      location: "Ghaziabad, Uttar Pradesh",
-      winnings: "₹1 Crore",
-      testimonial: "I won 1 crore on Won by Bid & I am very happy. My experience with playing WonbyBid for the last 2 years has been amazing. I recommend it very highly to every sports fantasy player.",
-      image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/ramesh-singh.jpg"
+      name: "Anita Desai",
+      location: "Pune, Maharashtra",
+      winnings: "₹2.8 Lakh",
+      testimonial: "The multi-language support on WonByBid made it so accessible. Won ₹2.8 Lakh playing in regional leagues! The customer support team is always helpful and responsive.",
+      image: "/https://rcmg.in/fantasy/landingimg/acquistion/newlp2/pradip-apte.jpg"
     },
     {
-      name: "Pradip Apte",
-      location: "Latur, Maharashtra",
-      winnings: "₹1 Crore",
-      testimonial: "I've been an avid cricket follower since my childhood. I got to know about WonbyBid from a YouTube ad. Recently won 1 Crore on WonbyBid! The favorite part about the Won by Bid app is that it's easy, secure, and smooth!",
+      name: "Vikram Singh",
+      location: "Delhi, NCR",
+      winnings: "₹4.5 Lakh",
+      testimonial: "WonByBid's special tournaments during festival seasons are amazing! Participated in Diwali Special League and won ₹4.5 Lakh. The bonus features and referral program add extra value.",
+      image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/pradip-apte.jpg"
+    },
+    {
+      name: "Kavitha Reddy",
+      location: "Chennai, Tamil Nadu",
+      winnings: "₹6.2 Lakh",
+      testimonial: "From a casual player to a pro - WonByBid made it possible! Won ₹6.2 Lakh in progressive leagues. The practice contests helped me understand strategies better. Best fantasy platform hands down!",
       image: "https://rcmg.in/fantasy/landingimg/acquistion/newlp2/pradip-apte.jpg"
     },
   ];
@@ -59,7 +59,7 @@ const TestimonialSlider = () => {
   return (
     <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-800 text-center mb-8 sm:mb-12">
-        Players Love WonbyBid
+        Players Love WonByBid
       </h2>
 
       <div className="relative">
@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="w-full sm:w-1/2 flex-shrink-0 px-2 sm:px-4">
-                <div className="rounded-lg p-4 sm:p-6 lg:p-8   transition-shadow duration-300">
+                <div className="rounded-lg p-4 sm:p-6 lg:p-8 transition-shadow duration-300">
                   <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
                     <img
                       src={testimonial.image}

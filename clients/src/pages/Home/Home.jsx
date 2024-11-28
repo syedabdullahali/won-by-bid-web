@@ -21,7 +21,7 @@ const Home = () => {
       <SportsContent />
       <FAQAccordion />
       <TestimonialSlider />
-      <div className="fixed bottom-0 right-0 p-4 bg-red-500 shadow-md rounded-t-xl ">
+      <div className=" lg:fixed bottom-0 right-0 p-4 bg-red-500 shadow-md rounded-t-xl sm hidden lg:block ">
         <button onClick={handleDownloadAppClick} className="text-sm font-medium">Download WonByBid app</button>
       </div>
     </div>
