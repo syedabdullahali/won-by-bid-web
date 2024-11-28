@@ -2,8 +2,8 @@ import React from 'react';
 
 const FlexibleContestsInWonByBid = () => {
   return (
-    <div className="bg-white rounded-lg max-w-4xl mx-auto  p-6 space-y-4">
-      <h2 className="text-2xl font-bold mb-4 text-red-500">Flexible Contests in WonByBid: How It Works</h2>
+    <div className="bg-white rounded-lg max-w-6xl mx-auto  p-6 space-y-4">
+      <h2 className="text-4xl font-bold mb-4 text-red-500">Flexible Contests in WonByBid: How It Works</h2>
       <p className="mb-4">In Flexible Contests on WonByBid, the prize pool is fixed, and the maximum number of participants is predefined. The contest dynamically adapts based on the actual number of participants, ensuring fairness and transparency. This model builds trust and loyalty by maintaining a clear and predictable system.</p>
 
       <h3 className="text-xl font-bold mb-4 text-red-500">Key Features of Flexible Contests</h3>

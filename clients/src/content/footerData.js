@@ -12,7 +12,7 @@ import {
   
   export const FOOTER_CONFIG = {
     quickLinks: [
-      { title: "Home", link: "#" },
+      { title: "Home", link: "/" },
       { title: "How to Play", link: "/how-to-play" },
       { title: "How to Download", link: "/how-to-download" },
       { title: "How to Bid", link: "/points-system" },

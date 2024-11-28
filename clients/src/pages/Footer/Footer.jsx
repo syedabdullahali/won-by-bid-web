@@ -1,6 +1,7 @@
 import React from "react";
 import { FOOTER_CONFIG } from "../../content/footerData";
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const { 
     quickLinks, 
@@ -10,6 +11,13 @@ const Footer = () => {
     securityImages,
     companyInfo 
   } = FOOTER_CONFIG;
+
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <footer className="bg-red-800 text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -48,6 +56,7 @@ const Footer = () => {
                       <Link 
                         to={link.link}
                         className="text-sm hover:text-red-200 transition-colors duration-200 block truncate"
+                        onClick={handleClick}
                       >
                         {link.title}
                       </Link>
@@ -61,10 +70,11 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold mb-4">More Links</h3>
                 <ul className="space-y-2">
                   {secondColumnLinks.map((link, index) => (
-                    <li key={index} className="underline ">
+                    <li key={index} className="underline">
                       <Link 
                         to={link.link}
                         className="text-sm hover:text-red-200 transition-colors duration-200 block truncate"
+                        onClick={handleClick}
                       >
                         {link.title}
                       </Link>
@@ -109,10 +119,7 @@ const Footer = () => {
                     className="bg-white p-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 group"
                   >
                     <div className="flex flex-col items-center space-y-2">
-                      <img src={partner.image} alt="payment partner" className="w-16 h-8 object-contain object-center "/>
-                      {/* <span className="text-red-800 text-xs sm:text-sm font-medium text-center group-hover:text-red-600 transition-colors">
-                        {partner.name}
-                      </span> */}
+                      <img src={partner.image} alt="payment partner" className="w-16 h-8 object-contain object-center"/>
                     </div>
                   </div>
                 ))}

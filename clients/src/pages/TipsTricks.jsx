@@ -3,7 +3,7 @@ import React from 'react';
 const TipsAndTricksForSuccessOnWonByBid = () => {
   return (
     <div className="bg-white rounded-lg  p-6 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-semibold mb-6 text-center text-red-600">Tips and Tricks for Success on WonByBid</h2>
+      <h2 className="text-4xl font-semibold mb-6 text-center text-red-600">Tips and Tricks for Success on WonByBid</h2>
       <p className="mb-6 text-gray-700 text-lg">Maximize your winnings and enhance your bidding strategy on <strong>WonByBid</strong> with these helpful tips and tricks:</p>
 
       <h3 className="text-2xl font-semibold mb-4 text-red-600">1. Study Winning Bids and Patterns</h3>
